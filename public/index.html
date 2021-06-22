@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Motor Bike Website</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- header start -->
+
+    <header id="header" class="header">
+      <nav>
+        <a href="#" class="header__logo">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#listing">Listing</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+
+        <button class="header__menuBtn">
+          <i class="fas fa-bars menu-open"></i>
+          <i class="fas fa-times menu-close"></i>
+        </button>
+      </nav>
+
+      <div class="header__content">
+        <div class="header__contentText">
+          <h1>Make your ride ease &amp; affordable</h1>
+
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it.
+          </p>
+
+          <div class="header__contentTextBtns">
+            <a href="#explore" class="btn-primary-rounded"
+              ><span><i class="fas fa-map-marker-alt"></i></span>Explore</a
+            >
+            <a href="#details" class="btn-secondary-rounded"
+              >Details<span><i class="fas fa-arrow-right"></i></span
+            ></a>
+          </div>
+        </div>
+
+        <figure class="header__contentImageBox">
+          <img src="./images/moped-yellow.png" alt="" />
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <!-- form start -->
+
+      <div id="form" class="form">
+        <form action="#" method="POST">
+          <div class="form__inputBox">
+            <label for="from">Where you from</label>
+            <input
+              type="text"
+              name="from"
+              id="from"
+              placeholder="Your Pickup Address"
+            />
+          </div>
+          <div class="form__inputBox">
+            <label for="to">Where you go</label>
+            <input
+              type="text"
+              name="to"
+              id="to"
+              placeholder="Your Destination Address"
+            />
+          </div>
+          <div class="form__inputBox">
+            <label for="journey">Journey date</label>
+            <input type="date" name="journey" id="journey" />
+          </div>
+          <div class="form__inputBox">
+            <label for="return">Return date</label>
+            <input type="date" name="return" id="return" />
+          </div>
+          <button type="submit" class="btn-primary">
+            <span><i class="fas fa-search"></i></span>Search
+          </button>
+        </form>
+      </div>
+
+      <!-- how rentals works -->
+
+      <section id="how" class="how">
+        <div class="how__headline">
+          <h2>How Rideo Bike Rental works</h2>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+        </div>
+
+        <div class="how__item">
+          <span class="how__itemNumber">01</span>
+          <h3>Search Location</h3>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+        </div>
+
+        <div class="how__item">
+          <span class="how__itemNumber">02</span>
+          <h3>Select Date &amp; Time</h3>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+        </div>
+
+        <div class="how__item">
+          <span class="how__itemNumber">03</span>
+          <h3>Pick Up</h3>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+        </div>
+
+        <div class="how__item">
+          <span class="how__itemNumber">04</span>
+          <h3>Make Ride</h3>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+        </div>
+      </section>
+
+      <!-- search location start -->
+
+      <section id="location" class="location">
+        <figure class="location__imageBox">
+          <img src="./images/moped-white.png" alt="" />
+        </figure>
+
+        <div class="location__text">
+          <h2>Easy to Search Location</h2>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+
+          <div class="location__textForm">
+            <form action="#" method="POST">
+              <div class="location__textFormInputBox">
+                <input
+                  type="text"
+                  name="pickup"
+                  id="pickup"
+                  placeholder="Pick Up location"
+                />
+              </div>
+              <div class="location__textFormInputBox">
+                <input
+                  type="text"
+                  name="destination"
+                  id="destination"
+                  placeholder="Enter Destination location"
+                />
+              </div>
+
+              <button type="submit" class="btn-primary-rounded">
+                <span><i class="fas fa-search"></i></span>Search Bike
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial start -->
+
+      <section id="testimonial" class="testimonial">
+        <div class="testimonial__headline">
+          <h2>What client say <br />about us</h2>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+
+          <div class="testimonial__headlineBtns">
+            <button class="testimonial__headlineBtnsPrev">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </button>
+            <button class="testimonial__headlineBtnsNext">
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonial__slider">
+          <div class="testimonial__sliderSlide">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Praesentium est culpa autem distinctio, eius esse ut sed dolores
+              ipsam expedita?
+            </p>
+
+            <div class="testimonial__sliderSlideClient">
+              <figure class="testimonial__sliderSlideClientImageBox">
+                <img src="./images/testimonial-1.jpg" alt="" />
+              </figure>
+              <div class="testimonial__sliderSlideClientName">
+                <h3>Adam Levine</h3>
+                <h4>@adam.levine</h4>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__sliderSlide">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
+              dolore dolores modi corrupti deleniti provident aliquid debitis
+              veritatis quo veniam magnam quae optio molestiae architecto iusto,
+              voluptatum aperiam fugit commodi enim sed! Recusandae ipsa
+              accusantium soluta perspiciatis, vero eum tempore.
+            </p>
+
+            <div class="testimonial__sliderSlideClient">
+              <figure class="testimonial__sliderSlideClientImageBox">
+                <img src="./images/testimonial-2.jpg" alt="" />
+              </figure>
+              <div class="testimonial__sliderSlideClientName">
+                <h3>Jenny Hilguston</h3>
+                <h4>@jennyhilguston</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial__sliderSlide">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore,
+              officia?
+            </p>
+
+            <div class="testimonial__sliderSlideClient">
+              <figure class="testimonial__sliderSlideClientImageBox">
+                <img src="./images/testimonial-3.jpg" alt="" />
+              </figure>
+              <div class="testimonial__sliderSlideClientName">
+                <h3>George Winston</h3>
+                <h4>@georgewinston</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- available for iOS & Android start -->
+
+      <section id="available" class="available">
+        <figure class="available__imageBox">
+          <img src="./images/mobile.png" alt="" />
+        </figure>
+
+        <div class="available__text">
+          <h2>
+            Rideo Apps available <br />
+            for iOS &amp; Android
+          </h2>
+          <p>
+            Proper Business solution for your developing business strategies and
+            corporation.
+          </p>
+
+          <div class="available__textForm">
+            <form action="#" method="POST">
+              <div class="available__textFormInputBox">
+                <input type="tel" />
+                <button type="submit" class="btn-primary">Send Link</button>
+              </div>
+            </form>
+          </div>
+
+          <p>or find in</p>
+
+          <figure class="available__textStores">
+            <img src="./images/button-google-play.png" alt="" />
+            <img src="./images/button-app-store.png" alt="" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- questions -->
+
+      <section id="tabs" class="tabs">
+        <h2>Getting Started</h2>
+        <p>
+          Proper Business solution for your developing business strategies and
+          corporation.
+        </p>
+
+        <div class="tabs__menu">
+          <div class="tabs__menuTab">
+            <h3>How to contact with riders emergency?</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+              quisquam, pariatur omnis alias nulla tenetur accusantium quas
+              iusto! Asperiores sint alias, sed vitae reprehenderit itaque. Eum
+              accusamus iusto magnam optio voluptatem impedit similique atque
+              esse obcaecati? Beatae nihil totam vel doloribus provident,
+              necessitatibus itaque dolor animi suscipit sint non! Molestias.
+            </p>
+          </div>
+
+          <div class="tabs__menuTab">
+            <h3>App installation failed, how to update system information?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro
+              provident assumenda et sit asperiores dignissimos esse ad sequi
+              eius optio dolore cum, quas non in, accusamus voluptatem
+              perspiciatis quibusdam iure atque voluptatibus aliquid! Alias
+              mollitia quod totam perspiciatis quaerat.
+            </p>
+          </div>
+
+          <div class="tabs__menuTab">
+            <h3>Website response taking time, how to improve?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              amet accusamus ullam repellendus? Magni recusandae suscipit nisi
+              sunt dolorem a ipsum iure quae dicta quisquam corrupti quos eius
+              consequatur nam, quasi error vel iste nobis deserunt maxime modi
+              perferendis cum aperiam! Porro ad maxime distinctio
+              exercitationem, perspiciatis architecto cum. Ex laboriosam nisi
+              maxime cumque cupiditate in sint incidunt nobis modi!
+            </p>
+          </div>
+
+          <div class="tabs__menuTab">
+            <h3>New update fixed all bug and issues</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+              magnam voluptatibus nulla nisi perferendis dolorum labore maxime,
+              alias, cum totam molestias sit deserunt quos numquam consectetur
+              aperiam ducimus soluta laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer start -->
+
+    <footer id="footer" class="footer">
+      <div>
+        <div class="footer__column">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="#map">Site Map</a></li>
+            <li><a href="#term">Term &amp; Conditions</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="#team">Team &amp; group</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#details">Bike Details</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#press">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#categories">Categories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h2>Contact Info</h2>
+          <ul>
+            <li><a href="#">Support@turbo.com</a></li>
+            <li><a href="#">+880 9751 3654</a></li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#google"><i class="fab fa-google-plus-g"></i></a>
+            </li>
+            <li>
+              <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <figure>
+          <img src="./images/logo.svg" alt="" />
+          <figcaption>&copy; 2021 Rideo Inc. Savo Ristic</figcaption>
+        </figure>
+      </div>
+    </footer>
+  </body>
+</html>

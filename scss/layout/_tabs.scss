@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.tabs {
+  width: 100%;
+  max-width: 95rem;
+  margin: 0 auto;
+
+  @include pseudo($top: -50%, $left: -50%, $height: 150%) {
+    background: $light-blue-color;
+    border-radius: border-radius(circle);
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  &__menuTab {
+    height: 9rem;
+    margin-top: 1rem;
+    border-radius: border-radius(m);
+    box-shadow: box-shadow(s);
+    background: $light-color;
+    overflow: hidden;
+
+    &--active {
+      height: auto;
+    }
+  }
+}

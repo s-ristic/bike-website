@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+%btn {
+  display: inline-block;
+  outline: none;
+  font-size: font-size(xs);
+  font-weight: font-weight(bold);
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// primary
+
+%primary {
+  @extend %btn;
+  background: $blue-color;
+  color: $light-color;
+  border-radius: border-radius(m);
+  border: none;
+}
+.btn-primary {
+  @extend %primary;
+}
+.btn-primary-rounded {
+  @extend %primary;
+  border-radius: 5rem;
+}
+
+// secondary
+
+%secondary {
+  @extend %btn;
+  background: $light-blue-color;
+  color: $blue-color;
+  border-radius: border-radius(m);
+  border: 0.1rem solid;
+}
+.btn-secondary {
+  @extend %secondary;
+}
+.btn-secondary-rounded {
+  @extend %secondary;
+  border-radius: 5rem;
+}

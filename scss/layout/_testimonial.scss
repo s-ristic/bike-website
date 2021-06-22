@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+.testimonial {
+  @include flex(column, center, flex-start);
+
+  @include mq(lg) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__headline {
+    max-width: 30rem;
+    margin-bottom: 3rem;
+
+    @include mq(lg) {
+      margin-bottom: 0;
+      margin-right: 5rem;
+    }
+
+    &Btns {
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        color: $blue-color;
+        font-size: font-size(m);
+        margin-right: 1rem;
+        cursor: pointer;
+        opacity: 0.7;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    width: 100%;
+    max-width: 55rem;
+    border-radius: border-radius(m);
+    box-shadow: box-shadow(m);
+    overflow: hidden;
+
+    &Slide {
+      min-width: 100%;
+      padding: 2rem;
+      @extend %transition;
+
+      @include mq(lg) {
+        padding: 4rem 5rem;
+      }
+
+      &Client {
+        @include flex($justify-content: flex-start);
+
+        &ImageBox {
+          position: relative;
+          width: 4rem;
+          height: 4rem;
+          margin-right: 2rem;
+
+          img {
+            border-radius: border-radius(circle);
+          }
+        }
+      }
+    }
+  }
+}

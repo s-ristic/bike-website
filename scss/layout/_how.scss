@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+.how {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem;
+
+  @include mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__headline {
+    @include mq(lg) {
+      grid-row: 1/3;
+    }
+  }
+
+  &__item {
+    max-width: 25rem;
+
+    &Number {
+      color: $blue-color;
+      font-size: font-size(xxl);
+
+      @include pseudo($top: 2%, $left: -10%, $width: 8rem, $height: 8rem) {
+        background: $light-blue-color;
+        border-radius: border-radius(circle);
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      @include pseudo(
+        $location: after,
+        $top: 75%,
+        $left: 75%,
+        $width: 2rem,
+        $height: 2rem
+      ) {
+        background: $light-blue-color;
+        border-radius: border-radius(circle);
+        opacity: 0.7;
+        z-index: -1;
+      }
+    }
+  }
+}

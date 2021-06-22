@@ -1,0 +1,221 @@
+@use '../utils' as *;
+
+.header {
+  position: relative;
+  padding: 2rem 3rem 16rem;
+  background: linear-gradient($light-color 70%, $gray-color);
+  overflow: hidden;
+
+  @include pseudo($top: -15%, $left: initial, $width: 60%, $height: 100%) {
+    right: -20%;
+    background: $light-blue-color;
+    border-radius: border-radius(circle);
+    opacity: 0.2;
+  }
+
+  @include mq(lg) {
+    padding: 2rem 12rem 16rem;
+  }
+
+  &__logo {
+    position: relative;
+    width: 15rem;
+    height: 5rem;
+    margin-right: 10rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+  nav {
+    position: relative;
+    @include flex($justify-content: flex-start);
+    z-index: 2;
+
+    ul {
+      @include flex(column);
+      position: absolute;
+      top: 5rem;
+      right: 0;
+      width: 60%;
+      background: $light-color;
+      padding: 2rem;
+      border: 0.3rem solid $gray-color;
+      box-shadow: box-shadow(l);
+      border-radius: border-radius(m);
+      visibility: hidden;
+      opacity: 0;
+      @extend %transition;
+
+      @include mq(lg) {
+        position: relative;
+        flex-direction: row;
+        top: initial;
+        right: initial;
+        width: initial;
+        background: none;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: none;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      li {
+        margin: 1rem 0;
+        @include mq(lg) {
+          margin: 0;
+          margin-right: 3rem;
+        }
+
+        a {
+          color: $text-color;
+          font-weight: font-weight(bold);
+          padding: 0.5rem;
+
+          &:hover::before,
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: right;
+          }
+
+          @include pseudo(
+            $top: initial,
+            $left: 0.5rem,
+            $width: calc(50% - 0.5rem),
+            $height: 0.3rem
+          ) {
+            bottom: 0;
+            background: $blue-color;
+            transform: scaleX(0);
+            transform-origin: left;
+            @extend %transition;
+          }
+
+          @include pseudo(
+            $location: after,
+            $top: initial,
+            $left: initial,
+            $width: calc(50% - 0.5rem),
+            $height: 0.3rem
+          ) {
+            bottom: 0;
+            right: 0.5rem;
+            background: $light-blue-color;
+            transform: scaleX(0);
+            transform-origin: right;
+            @extend %transition;
+          }
+        }
+      }
+    }
+  }
+
+  nav.menu-open .fa-times {
+    display: block;
+  }
+  nav.menu-open .fa-bars {
+    display: none;
+  }
+  nav.menu-open > ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__menuBtn {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    font-size: font-size(xl);
+    @include flex();
+    cursor: pointer;
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    .fas {
+      position: absolute;
+    }
+
+    .fa-times {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    @include flex(column);
+    padding-top: 6rem;
+    z-index: 1;
+
+    @include mq(lg) {
+      padding-top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &Text {
+      @include mq(lg) {
+        width: 45%;
+      }
+
+      p {
+        margin: 4rem 0;
+        line-height: 2;
+      }
+
+      &Btns {
+        a {
+          letter-spacing: 0.1rem;
+
+          span {
+            font-size: font-size(s);
+          }
+        }
+        a:first-of-type {
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+
+          @include mq(lg) {
+            margin-right: 1rem;
+            margin-bottom: 0;
+          }
+
+          span {
+            margin-right: 1rem;
+          }
+        }
+        a:last-of-type {
+          span {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    &ImageBox {
+      position: relative;
+      width: 28rem;
+      height: 28rem;
+      margin-top: 8rem;
+
+      @include mq(lg) {
+        width: 50%;
+        height: 70rem;
+        margin-top: 0;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

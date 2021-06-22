@@ -1,0 +1,69 @@
+@use '../utils' as *;
+
+.form {
+  position: relative;
+  width: 90%;
+  max-width: 40rem;
+  margin: -7rem auto 3rem;
+  padding: 3rem;
+  box-shadow: box-shadow(m);
+  border-radius: border-radius(m);
+  background: $light-color;
+  z-index: 1;
+
+  @include mq(lg) {
+    max-width: max-content;
+    margin: -7rem auto 8rem;
+  }
+
+  form {
+    @include flex(column);
+
+    @include mq(lg) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  &__inputBox {
+    width: 100%;
+
+    margin-bottom: 4rem;
+
+    @include mq(lg) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+
+    label {
+      display: block;
+      font-weight: font-weight(bold);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-size: font-size(s);
+    }
+
+    input {
+      border: 0.1rem solid #eee;
+      outline: none;
+      width: 100%;
+      height: 5.3rem;
+      padding: 0 1rem;
+      font-size: font-size(s);
+      border-radius: border-radius(s);
+      font-family: inherit;
+
+      &::placeholder {
+        font-size: font-size(xs);
+      }
+    }
+  }
+
+  button {
+    white-space: nowrap;
+
+    span {
+      margin-right: 1rem;
+    }
+  }
+}
